@@ -1,27 +1,27 @@
 <html>
+
 <head>
-<title>
-Read Json file
-</title>
-  <script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> </script>
+    <meta charset="utf-8" />
+    <title>Read and Parse JSON String in jQuery | Example</title>
 </head>
+
 <body>
-Learn in 3 min .. everything!
-  <div id="dataList"> </div>
-  <script>
-    $(document).ready(function() {
-      $.getJSON("https://github.com/threemineverything/DemoSite/blob/master/test.json", function(data)) {
+    <div id="datalist"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://raw.githubusercontent.com/animeshmalhotra/PoC/master/test.json", function(data) {
                 var nameAge = "";
-                
+
                 $.each(data, function(i, item) {
-              nameAge += item.Name + " " + item.Age + "<br> <br>";          
-          
-              $("dataList").html(nameAge);
-      }
-                }
-    
-    })
-  </script>
-  
+                    nameAge += item.Name + "  " + item.Age + "<br> <br>";
+
+                    $("#datalist").html(nameAge);
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
