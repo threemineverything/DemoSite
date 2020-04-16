@@ -7,17 +7,19 @@ Json Read in HTML
 </head>
 <body>
 Json Read File in HTML
-  $(document).reaf(function(){
-    $.getJSON("https://raw.githubusercontent.com/threemineverything/DemoSite/master/test.json", function(data) {
-      var nameAge;
-  
-  $.each(data, function(i, item) {
-    nameAge += item.Name + " " + item.Age + "<br> <br>" ;
-  
-    $("#dataList").html(nameAge);
-  });
-  });
-  });
+  <script>
+        $(document).ready(function() {
+            $.getJSON("https://raw.githubusercontent.com/threemineverything/DemoSite/master/test.json", function(data) {
+                var nameAge = "";
+
+                $.each(data, function(i, item) {
+                    nameAge += item.Name + "  " + item.Age + "<br> <br>";
+
+                    $("#datalist").html(nameAge);
+                });
+            });
+        });
+    </script>
   
   <div id="dataList"> </div>
 </body>
