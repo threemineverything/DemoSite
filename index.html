@@ -1,13 +1,16 @@
 <html>
+
 <head>
-<title>
-Json Read in HTML
-</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Json Read in HTML</title>
 </head>
+
 <body>
-Json Read File in HTML
-  <script>
+  Json Read File in HTML
+    <div id="datalist"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
         $(document).ready(function() {
             $.getJSON("https://raw.githubusercontent.com/threemineverything/DemoSite/master/test.json", function(data) {
                 var nameAge = "";
@@ -20,7 +23,6 @@ Json Read File in HTML
             });
         });
     </script>
-  
-  <div id="dataList"> </div>
 </body>
+
 </html>
