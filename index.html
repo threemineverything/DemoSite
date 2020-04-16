@@ -1,10 +1,24 @@
 <html>
 <head>
 <title>
-Demo Site
+Json Read in HTML
 </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-Learn in 3 min .. everything!
+Json Read File in HTML
+  $(document).reaf(function(){
+    $.getJSON("https://raw.githubusercontent.com/threemineverything/DemoSite/master/test.json", function(data) {
+      var nameAge;
+  
+  $.each(data, function(i, item) {
+    nameAge += item.Name + " " + item.Age + "<br> <br>" ;
+  
+    $("#dataList").html(nameAge);
+  }
+  })
+  })
+  
+  <div id="dataList"> </div>
 </body>
 </html>
