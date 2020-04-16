@@ -1,28 +1,10 @@
 <html>
-
 <head>
-    <meta charset="utf-8" />
-    <title>Read JSON File</title>
+<title>
+Demo Site
+</title>
 </head>
-
 <body>
-    Learn in 3 min ..everything!
-    <div id="datalist"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.getJSON("https://raw.githubusercontent.com/threemineverything/DemoSite/master/test.json", function(data) {
-                var nameAge = "";
-
-                $.each(data, function(i, item) {
-                    nameAge += item.Name + "  " + item.Age + "<br> <br>";
-
-                    $("#datalist").html(nameAge);
-                });
-            });
-        });
-    </script>
+Learn in 3 min .. everything!
 </body>
-
 </html>
